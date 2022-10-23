@@ -25,10 +25,17 @@ async function getLatest(req: Request, res: Response) {
   res.send(data);
 }
 
+async function getLaunchById(req: Request, res: Response) {
+  const { id } = req.params;
+  const data = await launchService.getLaunchById(id);
+  res.send(data);
+}
+
 const launchController = {
   getLatest,
   getNext,
   getPast,
   getUpcoming,
+  getLaunchById,
 };
 export default launchController;

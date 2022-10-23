@@ -1,3 +1,31 @@
+const selectArr = [
+  "crew",
+  "upcoming",
+  "links.patch",
+  "links.webcast",
+  "details",
+  "failures",
+  "date_unix",
+  "upcoming",
+  "success",
+  "flight_number",
+  "name",
+];
+
+export function launchConfigById(id: string) {
+  const config = {
+    query: {
+      _id: id,
+    },
+    options: {
+      limit: 1,
+      select: selectArr,
+    },
+  };
+
+  return config;
+}
+
 export function launchConfig(
   upcoming: boolean,
   page: number,
@@ -9,20 +37,7 @@ export function launchConfig(
     options: {
       limit: limit,
       page: page,
-      select: [
-        "crew",
-        "upcoming",
-        "links.patch",
-        "links.webcast",
-        "webcast",
-        "details",
-        "failures",
-        "date_unix",
-        "upcoming",
-        "success",
-        "flight_number",
-        "name",
-      ],
+      select: selectArr,
       sort: {
         flight_number: order,
       },
