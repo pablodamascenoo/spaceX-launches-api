@@ -2,11 +2,11 @@
   "name": "spacex-launchs-api",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "build": "tsc",
     "dev": "nodemon src/server.ts",
-    "start": "node dist/src/server.js"
+    "start": "node dist/server.js"
   },
   "type": "module",
   "keywords": [],
