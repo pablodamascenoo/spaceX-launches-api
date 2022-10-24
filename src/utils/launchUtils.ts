@@ -2,7 +2,7 @@ const selectArr = [
   "crew",
   "upcoming",
   "links.patch",
-  "links.webcast",
+  "links.youtube_id",
   "details",
   "failures",
   "date_unix",
